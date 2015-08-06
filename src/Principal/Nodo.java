@@ -13,6 +13,7 @@ public class Nodo {
     Nodo siguiente = null;
     Nodo anterior = null;
     String texto = "";
+    int numero = 0;
     
     public Nodo(){}
     
