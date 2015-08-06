@@ -50,10 +50,17 @@ public class ListaCP {
             }
             aux = aux.siguiente;
         }
-        
-        while(primero != null){
-            System.out.println("Posicion 1: " + primero.texto);
-            primero = primero.anterior;
+        Nodo aux2 = primero;
+        while(aux2 != null){
+            System.out.println("Posicion 1: " + aux2.texto);
+            aux2 = aux2.anterior;
         }
+    }
+    
+    public void resetear(){
+        primero = null;
+        ultimo = null;
+        modalidad = "" ;
+        correlativo = 0;
     }
 }

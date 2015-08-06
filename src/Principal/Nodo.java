@@ -14,7 +14,10 @@ public class Nodo {
     Nodo anterior = null;
     String texto = "";
     int numero = 0;
+    String entrada = "";
     
-    public Nodo(){}
+    public Nodo(String entrada){
+        this.entrada = entrada;
+    }
     
 }
