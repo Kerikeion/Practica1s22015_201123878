@@ -14,11 +14,29 @@ public class Ventana extends javax.swing.JFrame {
     /** Lista y variables auxiliares*/
     
     ListaCP objetos;
+    MatrizOrtogonal mapa;
     
     /** Creates new form Ventana */
     public Ventana() {
         initComponents();
         objetos = new ListaCP();
+        /*mapa = new MatrizOrtogonal();
+        mapa.nuevaCol();
+        mapa.nuevaFila();
+        mapa.Agregar(1, 1, new Posicion(1,1));
+        mapa.nuevaCol();
+        mapa.nuevaFila();
+        mapa.Agregar(2, 1, new Posicion(2,1));
+        mapa.Agregar(1, 2, new Posicion(1,2));
+        mapa.Agregar(2, 2, new Posicion(2,2));
+        mapa.nuevaCol();
+        mapa.nuevaFila();
+        mapa.Agregar(3,1, new Posicion(3,1));
+        mapa.Agregar(3,2, new Posicion(3,2));
+        mapa.Agregar(1,3, new Posicion(1,3));
+        mapa.Agregar(2,3, new Posicion(3,2));
+        mapa.Agregar(3,3, new Posicion(3,2));
+        mapa.imprimirse();*/
     }
 
     /** This method is called from within the constructor to
