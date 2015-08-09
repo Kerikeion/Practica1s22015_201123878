@@ -90,6 +90,32 @@ public class MatrizOrtogonal {
         }
     }
 
+    public void EliminarCol(){
+        recorredor = inicio;
+        while (recorredor.derecha != null){
+            recorredor = recorredor.derecha;
+        }
+        recorredor = recorredor.izquierda;
+        while(recorredor != null){
+            recorredor.derecha = null;
+            recorredor = recorredor.abajo;
+        }
+        columnas --;
+    }
+    
+    public void EliminarFilas(){
+        recorredor = inicio;
+        while (recorredor.abajo != null){
+            recorredor = recorredor.abajo;
+        }
+        recorredor = recorredor.arriba;
+        while(recorredor != null){
+            recorredor.abajo = null;
+            recorredor = recorredor.derecha;
+        }
+        filas --;
+    }
+    
     public void imprimirse(){
         Posicion auxiliar = inicio;
         Posicion auxiliar2 = inicio;

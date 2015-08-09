@@ -20,23 +20,6 @@ public class Ventana extends javax.swing.JFrame {
     public Ventana() {
         initComponents();
         objetos = new ListaCP();
-        /*mapa = new MatrizOrtogonal();
-        mapa.nuevaCol();
-        mapa.nuevaFila();
-        mapa.Agregar(1, 1, new Posicion(1,1));
-        mapa.nuevaCol();
-        mapa.nuevaFila();
-        mapa.Agregar(2, 1, new Posicion(2,1));
-        mapa.Agregar(1, 2, new Posicion(1,2));
-        mapa.Agregar(2, 2, new Posicion(2,2));
-        mapa.nuevaCol();
-        mapa.nuevaFila();
-        mapa.Agregar(3,1, new Posicion(3,1));
-        mapa.Agregar(3,2, new Posicion(3,2));
-        mapa.Agregar(1,3, new Posicion(1,3));
-        mapa.Agregar(2,3, new Posicion(3,2));
-        mapa.Agregar(3,3, new Posicion(3,2));
-        mapa.imprimirse();*/
     }
 
     /** This method is called from within the constructor to
@@ -77,6 +60,7 @@ public class Ventana extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 255));
@@ -186,6 +170,13 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
 
+        jButton12.setText("Siguiente");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,9 +211,8 @@ public class Ventana extends javax.swing.JFrame {
                             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                 .add(jLabel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .add(jButton3)
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(jLabel4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .add(jTextField3))
+                                .add(jLabel4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(jTextField3)
                                 .add(jTextField6))))
                     .add(layout.createSequentialGroup()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -240,9 +230,12 @@ public class Ventana extends javax.swing.JFrame {
                     .add(layout.createSequentialGroup()
                         .add(jButton9)
                         .add(31, 31, 31)
-                        .add(jButton10)
-                        .add(29, 29, 29)
-                        .add(jButton11)))
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jButton12)
+                            .add(layout.createSequentialGroup()
+                                .add(jButton10)
+                                .add(29, 29, 29)
+                                .add(jButton11)))))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -310,7 +303,9 @@ public class Ventana extends javax.swing.JFrame {
                     .add(jButton9)
                     .add(jButton10)
                     .add(jButton11))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jButton12)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -322,8 +317,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField1.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField1.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Suelo";
+        item.texto = "Suelo.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -333,8 +329,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField2.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField2.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Goomba";
+        item.texto = "Goomba.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -344,8 +341,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField3.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField3.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Ficha";
+        item.texto = "Ficha.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -355,8 +353,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField4.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField4.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Hongo";
+        item.texto = "Hongo.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -366,8 +365,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField5.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField5.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Mario";
+        item.texto = "Mario.jpg";
         objetos.Agregar(item);
         objetos.recorrer();
         jButton5.setEnabled(false);
@@ -379,8 +379,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField6.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField6.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Pared";
+        item.texto = "Pared.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -390,8 +391,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField7.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField7.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Koopa";
+        item.texto = "Koopa.jpg";
         objetos.Agregar(item);
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -401,8 +403,9 @@ public class Ventana extends javax.swing.JFrame {
         if(jTextField5.getText().equals("")){
             nombre = "Sin nombre";
         }
+        else{  nombre = jTextField8.getText(); }
         Nodo item = new Nodo(nombre);
-        item.texto = "Puerta";
+        item.texto = "Puerta.png";
         objetos.Agregar(item);
         objetos.recorrer();
         jButton8.setEnabled(false);
@@ -422,6 +425,11 @@ public class Ventana extends javax.swing.JFrame {
         // TODO add your handling code here:
         objetos.modoCola();
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -462,6 +470,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
