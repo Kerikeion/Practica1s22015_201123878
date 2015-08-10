@@ -4,6 +4,8 @@
  */
 package Principal;
 
+import javax.swing.JLayeredPane;
+
 /**
  *
  * @author PDARML
@@ -130,6 +132,19 @@ public class MatrizOrtogonal {
             auxiliar2 = auxiliar2.abajo;
             auxiliar = auxiliar2;
             i ++;
+        }
+    }
+    
+    public void Dibujarse(JLayeredPane lienso){
+        Posicion auxiliar = inicio.derecha.abajo;
+        Posicion auxiliar2 = inicio.derecha.abajo;
+        while (auxiliar2 != null) { 
+            while (auxiliar != null) {
+                lienso.add(auxiliar.cuadro, 1);
+                auxiliar = auxiliar.derecha;
+            }
+            auxiliar2 = auxiliar2.abajo;
+            auxiliar = auxiliar2;
         }
     }
 }

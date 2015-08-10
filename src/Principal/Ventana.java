@@ -5,21 +5,24 @@
 
 package Principal;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JLabel;
+
 /**
  *
  * @author PDARML
  */
 public class Ventana extends javax.swing.JFrame {
 
-    /** Lista y variables auxiliares*/
     
     ListaCP objetos;
-    MatrizOrtogonal mapa;
+    static DefaultListModel <JLabel> modeloLista;
     
     /** Creates new form Ventana */
     public Ventana() {
         initComponents();
         objetos = new ListaCP();
+        modeloLista = new DefaultListModel ();
     }
 
     /** This method is called from within the constructor to
@@ -61,6 +64,7 @@ public class Ventana extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 255));
@@ -177,66 +181,72 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
 
+        jButton13.setText("Elliminar");
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel1)
                     .add(layout.createSequentialGroup()
+                        .addContainerGap()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField1)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(jButton1)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField4)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(jButton4))
-                        .add(37, 37, 37)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                .add(jLabel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .add(jTextField2))
-                            .add(jButton2)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField5)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(jButton5))
-                        .add(44, 44, 44)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButton6)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                .add(jLabel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .add(jButton3)
-                                .add(jLabel4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .add(jTextField3)
-                                .add(jTextField6))))
-                    .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField7)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(jButton7))
-                        .add(111, 111, 111)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButton8)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                .add(jLabel9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .add(jTextField8))))
-                    .add(jLabel10)
-                    .add(layout.createSequentialGroup()
-                        .add(jButton9)
-                        .add(31, 31, 31)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButton12)
+                            .add(jLabel1)
                             .add(layout.createSequentialGroup()
+                                .add(jButton9)
+                                .add(31, 31, 31)
                                 .add(jButton10)
                                 .add(29, 29, 29)
-                                .add(jButton11)))))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(jButton11))
+                            .add(jLabel10)
+                            .add(layout.createSequentialGroup()
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField1)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(jButton1)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField4)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(jButton4))
+                                .add(37, 37, 37)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(jLabel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jTextField2))
+                                    .add(jButton2)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField5)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(jButton5))
+                                .add(44, 44, 44)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButton6)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(jLabel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jButton3)
+                                        .add(jLabel4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jTextField3)
+                                        .add(jTextField6))))
+                            .add(layout.createSequentialGroup()
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField7)
+                                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(jButton7))
+                                .add(111, 111, 111)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jButton8)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(jLabel9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jTextField8))))))
+                    .add(layout.createSequentialGroup()
+                        .add(109, 109, 109)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jButton13)
+                            .add(jButton12))))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -303,9 +313,11 @@ public class Ventana extends javax.swing.JFrame {
                     .add(jButton9)
                     .add(jButton10)
                     .add(jButton11))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 108, Short.MAX_VALUE)
+                .add(jButton13)
+                .add(18, 18, 18)
                 .add(jButton12)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -321,6 +333,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Suelo.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Suelo", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Suelo.jpg")),0));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -333,6 +347,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Goomba.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Goomba", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Goomba.jpg")),0));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -345,6 +361,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Ficha.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Ficha", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Ficha.jpg")),0));
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -357,6 +375,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Hongo.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Hongo", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Hongo.jpg")),0));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -371,6 +391,8 @@ public class Ventana extends javax.swing.JFrame {
         objetos.Agregar(item);
         objetos.recorrer();
         jButton5.setEnabled(false);
+        modeloLista.addElement(new JLabel("Mario", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Mario.jpg")),0));
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -383,6 +405,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Pared.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Pared", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Pared.jpg")),0));
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -395,6 +419,8 @@ public class Ventana extends javax.swing.JFrame {
         Nodo item = new Nodo(nombre);
         item.texto = "Koopa.jpg";
         objetos.Agregar(item);
+        modeloLista.addElement(new JLabel("Koopa", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Koopa.jpg")),0));
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -409,11 +435,14 @@ public class Ventana extends javax.swing.JFrame {
         objetos.Agregar(item);
         objetos.recorrer();
         jButton8.setEnabled(false);
+        modeloLista.addElement(new JLabel("Castillo", new javax.swing.ImageIcon(getClass().getResource
+                ("/Principal/Puerta.png")),0));
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         objetos.resetear();
+        modeloLista.clear();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -428,7 +457,9 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-        
+        Tablero tablero = new Tablero(objetos);
+        tablero.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
@@ -471,6 +502,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

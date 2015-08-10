@@ -4,6 +4,7 @@
  */
 package Principal;
 import javax.swing.JLabel;
+import javax.swing.TransferHandler;
 /**
  *
  * @author PDARML
@@ -24,6 +25,12 @@ public class Posicion {
     public Posicion(int x, int y){
         horizontal = x;
         vertical = y;
+        int a = x; a--;
+        int b = y; b--;
+        cuadro = new JLabel();
+        cuadro.setTransferHandler(new TransferHandler("icon"));
+        cuadro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Principal/Fondo.jpg")));
+        cuadro.setBounds(a*DIMENSION, b*DIMENSION, DIMENSION, DIMENSION);
     }
     
     public void Dibujar(String ruta){
